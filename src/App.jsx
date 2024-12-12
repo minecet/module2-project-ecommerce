@@ -5,6 +5,7 @@ import { useState } from 'react'
 import './App.css'
 import Footer from './components/Footer.jsx'
 import Navbar from './components/Navbar.jsx'
+import List from './components/List.jsx'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Navbar/>
+      <List/>
       <Footer/>
     </>
   )
