@@ -2,7 +2,7 @@
 .navbar {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,6 @@
   }
 
   .navbar-brand {
-    margin-right: 210px;
+    margin-right: 1550px;
   }
 

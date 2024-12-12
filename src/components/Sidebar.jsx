@@ -5,8 +5,10 @@ function Sidebar() {
   return (
     <div>
     <aside className="linkMenu">
-      <a> Home </a>
-      <a> About Page </a>      
+      <ul className='optionsMenu'>
+        <li> Home </li>
+        <li> About Page </li>
+      </ul>     
     </aside>
     </div>
   );
