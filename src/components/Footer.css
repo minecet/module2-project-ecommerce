@@ -1,0 +1,56 @@
+/* src/components/Footer.css */
+.footer {
+    position: relative;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed; /* Sticks to the bottom of the page */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Spacing between elements */
+    height: 20px; /* Adjust height as needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+  }
+
+  .github-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .github-link:hover {
+    color: #00bcd4;
+  }
+  
+  .github-link i {
+    font-size: 1.5rem; /* Adjust icon size */
+    vertical-align: middle;
+  }
+.github-icon-container {
+  background-color: white;
+  color: black;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; /* Adjust icon size */
+}
+
+.github-icon-container i {
+  font-size: 1.3rem; /* Adjust icon size for better scaling */
+}
+
+.github-icon {
+    width: 20px;  /* Adjust icon size as needed */
+    height: 20px;
+  }
