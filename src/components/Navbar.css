@@ -27,3 +27,7 @@
     width: auto;            /* Maintain aspect ratio */
   }
 
+  .navbar-brand {
+    margin-right: 210px;
+  }
+

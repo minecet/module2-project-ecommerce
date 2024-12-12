@@ -1,0 +1,12 @@
+.linkMenu {
+    position: fixed;
+    top: 0;       
+    left: 0; 
+    height: 950px;
+    width: 350px;
+    background-color: gray;
+}
+.linkMenu a{
+    color: white;
+    
+}
