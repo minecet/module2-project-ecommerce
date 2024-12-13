@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ListItem.css';
 function ListItem({ product, deleteItem }){
     //const [eachItem, setItem] = useState(props)
 
@@ -11,7 +12,7 @@ function ListItem({ product, deleteItem }){
     }
 
     return (
-        <div key= {product.id}>
+        <div className="bodyListItem" key= {product.id}>
             
             <h2>{product.title}</h2>
             <img src={product.thumbnail} alt={`Thumbnail of ${product.title}`} style={{ width: "50px" }} />
@@ -21,7 +22,7 @@ function ListItem({ product, deleteItem }){
             </p>
             <div>                    
                 {handleStockLimit(product.stock)}
-                <button onClick={() => deleteItem(product.id)}>Delete</button>
+                <button className="deleteButton" onClick={() => deleteItem(product.id)}>Delete</button>
             </div>
         
         </div>)

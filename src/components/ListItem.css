@@ -1,0 +1,20 @@
+.bodyListItem{
+margin-left: 80px;
+border: 1px black solid;
+margin-top: 10px;
+padding: 10px;
+}
+
+.bodyListItem h2{
+
+    text-shadow: 
+    -1px -1px 0  #70AABD, /* Sombra superior izquierda */
+     1px -1px 0  #70AABD, /* Sombra superior derecha */
+    -1px  1px 0  #70AABD, /* Sombra inferior izquierda */
+     1px  1px 0  #70AABD; /* Sombra inferior derecha */
+}
+
+.deleteButton {
+    background-color: #A3CADB;
+    border: 2px black solid;
+}
