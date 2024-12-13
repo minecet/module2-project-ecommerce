@@ -3,11 +3,10 @@
     top: 0;       
     left: 0; 
     height: 950px;
-    width: 19%;
+    width: 10%;
     background-color: gray;
 }
 .optionsMenu {
-    color: white;
     list-style: none;
     position: fixed;
     left: 0;
@@ -17,4 +16,8 @@
     padding-top: 50px;
     gap: 50px;
     
+}
+
+.optionsMenu li{
+    color: white;
 }

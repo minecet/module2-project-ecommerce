@@ -10,7 +10,7 @@
     position: fixed; 
     right: 0;      /* Sticks the navbar to the top */
     top: 0;                /* Align to the top of the viewport */
-    width: 80%;          /* Stretch across the full width of the viewport */
+    width: 89%;          /* Stretch across the full width of the viewport */
     height: 50px; 
     z-index: 1000;         /* Ensure it stays above other content */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a lifted effect */
