@@ -1,0 +1,19 @@
+.bodyHome{
+    display: flexbox;
+   text-align: center;
+   margin-left: 250%;
+}
+
+.bodyHome h1{
+    color: #70AABD;
+    text-shadow: 
+    -1px -1px 0 black, /* Sombra superior izquierda */
+     1px -1px 0 black, /* Sombra superior derecha */
+    -1px  1px 0 black, /* Sombra inferior izquierda */
+     1px  1px 0 black; /* Sombra inferior derecha */
+    
+}
+
+.bodyHome h3{
+display:inline-block
+}

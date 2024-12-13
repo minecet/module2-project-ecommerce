@@ -11,7 +11,8 @@ function List(){
       };
 
     return (
-        <div>
+
+        <div className="body">
             {products.map(eachProduct => (
                 <ListItem
                     key={eachProduct.id}

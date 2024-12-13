@@ -1,4 +1,9 @@
+import'./HomePage.css';
 const HomePage = () => {
-    return <h1>HomePage</h1>
+    return(
+        <div className='bodyHome'>
+    <h1>HomePage</h1>
+    </div>
+    )
 }
 export default HomePage;
