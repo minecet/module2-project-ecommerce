@@ -35,7 +35,7 @@ function List(){
       };
 
 
-
+      // tracking the add new or edit with the state of editProductId being null or not
       if (editProductId) {
         // Update existing product
         setProducts((prevProducts) =>
