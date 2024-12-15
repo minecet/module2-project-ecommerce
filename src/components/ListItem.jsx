@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './ListItem.css';
-function ListItem({ product, deleteItem }){
+function ListItem({ product, deleteItem, editItem }){
     //const [eachItem, setItem] = useState(props)
 
     const handleStockLimit = (stock) => {
@@ -23,6 +23,8 @@ function ListItem({ product, deleteItem }){
             <div>                    
                 {handleStockLimit(product.stock)}
                 <button className="deleteButton" onClick={() => deleteItem(product.id)}>Delete</button>
+                <button className="editButton"onClick={() => editItem(product)}>Edit</button> {/* Edit button */}
+
             </div>
         
         </div>)
