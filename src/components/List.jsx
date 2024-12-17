@@ -2,7 +2,7 @@ import productsData from "../assets/products.json";
 import React, { useState } from "react";
 import ListItem from "./ListItem.jsx";
 
-function List(){
+function List({setSelectedProduct}){
     const [products, setProducts] = useState(productsData)
     const [id, setid] = useState('')
     const [title, setTitle] = useState('')
@@ -88,6 +88,9 @@ function List(){
     setThumbnail(product.thumbnail);
     setImages(product.images);
   };
+  
+ 
+
 
     return (
 
@@ -249,8 +252,12 @@ function List(){
           product={eachProduct}
           deleteItem={deleteItem} // Pass delete handler
           editItem={editItem}
+          setSelectedProduct={setSelectedProduct}
+
         />
     ))}
+
+
       </div>)
 }
 
