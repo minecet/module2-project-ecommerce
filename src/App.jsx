@@ -17,19 +17,17 @@ function App() {
   return (
     <>
     <Navbar/>
-      
-      <Sidebar/>
-      <Footer/>
-
+    <Sidebar/>
+    <Footer/>
      <Routes>
 
-<Route path='/' element={< HomePage />} />
-<Route path='/about' element={< AboutPage />} />
-<Route path='/list' element={<List/>} />
+    <Route path='/' element={< HomePage />} />
+    <Route path='/about' element={< AboutPage />} />
+    <Route path='/list' element={<List/>} />
 
-<Route path='*' element={<h1>404 page</h1>}></Route>
+    <Route path='*' element={<h1>404 page</h1>}></Route>
 
-</Routes>
+    </Routes>
       
     </>
   )
