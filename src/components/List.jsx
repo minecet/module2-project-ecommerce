@@ -1,4 +1,4 @@
-import productsData from "../assets/products.json";
+import productsData from "../assets/updated_products.json";
 import React, { useState } from "react";
 import ListItem from "./ListItem.jsx";
 
