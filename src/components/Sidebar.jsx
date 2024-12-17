@@ -8,7 +8,7 @@ function Sidebar() {
     <aside className="linkMenu">
       <ul className='optionsMenu'>
       <li> <NavLink to='/list'>Dashboard</NavLink> </li>
-        <li> <NavLink to='/'>Item Details</NavLink> </li>
+       
         <li> <NavLink to='/about'>About Page</NavLink> </li>
         
       </ul>     

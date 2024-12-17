@@ -92,9 +92,9 @@ function List(){
     return (
 
         <div className="body">
-            <form onSubmit={handleSubmit}>
-            <span>Add a product</span>
-            <div>
+            <form  className="addingSection" onSubmit={handleSubmit}>
+            <span className="titleSection">ADD A NEW PRODUCT</span>
+            <div >
             <label>
                 Title
                 <input 
@@ -105,6 +105,7 @@ function List(){
                 onChange={event => setTitle(event.target.value)}
                 />
             </label>
+            <br></br>
 
             <label>
                 Description
@@ -116,7 +117,7 @@ function List(){
                 onChange={event => setDescription(event.target.value)}
                 />
             </label>
-
+            <br></br>
             <label>
                 Price
                 <input 
@@ -127,7 +128,7 @@ function List(){
                 placeholder="Price" 
                 />
             </label>
-
+            <br></br>
             <label>
                 Discount Percentage
                 <input 
@@ -139,7 +140,7 @@ function List(){
                 />
             </label>
             </div>
-
+            <br></br>
             <div>
             <label>
                 Category
@@ -161,7 +162,7 @@ function List(){
                 <option value="mens-shirts">mens-shirts</option>
                 </select>
             </label>
-
+            <br></br>
             <label>
                 Rating
                 <input
@@ -177,7 +178,7 @@ function List(){
 
                 />
             </label>
-
+            <br></br>
             <label>
                 Stock
                 <input
@@ -190,7 +191,7 @@ function List(){
 
                 />
             </label>
-
+            <br></br>
             <label>
                 Brand
                 <input
@@ -202,7 +203,7 @@ function List(){
                 onChange={event => setBrand(event.target.value)}
                 />
             </label>
-
+            <br></br>
             <label>
                 Thumbnail
                 <input
@@ -214,7 +215,7 @@ function List(){
 
                 />
             </label>
-
+            <br></br>
             <label>
                 Images
                 <input
@@ -226,8 +227,8 @@ function List(){
 
                 />
             </label>
-
-            <button type="submit">Add Product</button>
+            <br></br>
+            <button className="buttonAdding" type="submit">Add Product</button>
             </div>
 
         </form>

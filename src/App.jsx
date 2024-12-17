@@ -23,9 +23,9 @@ function App() {
 
      <Routes>
 
-<Route path='/' element={< HomePage />} />
-<Route path='/about' element={< AboutPage />} />
-<Route path='/list' element={<List/>} />
+<Route path='/' element={< HomePage />} /> /* itemdetails - homepage */
+<Route path='/about' element={< AboutPage />} /> /*profiles */
+<Route path='/list' element={<List/>} /> /*principal-dashboard*/
 
 <Route path='*' element={<h1>404 page</h1>}></Route>
 
