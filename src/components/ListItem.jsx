@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import './ListItem.css';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
-function ListItem({ product, deleteItem, editItem }){
+function ListItem({ product, deleteItem, editItem, setSelectedProduct }){
     //const [eachItem, setItem] = useState(props)
-
+    const navigate = useNavigate();
+    const handleDetailsClick = () => {
+        setSelectedProduct(product); // Store the selected product globally
+        navigate('/item-details');   // Navigate to the Item Details page
+      };
     const handleStockLimit = (stock) => {
         if (stock <= 15){
             return (<label htmlFor="outofStockWarning" style={{ backgroundColor: "red" }}><strong>Almost out of stock</strong> </label>);
@@ -34,6 +38,9 @@ function ListItem({ product, deleteItem, editItem }){
                 {handleStockLimit(product.stock)}
                 <button className="deleteButton" onClick={() => deleteItem(product.id)}>Delete</button>
                 <button className="editButton"onClick={() => editItem(product)}>Edit</button> {/* Edit button */}
+                <button className="detailsButton" onClick={handleDetailsClick}>Details</button>
+
+
             </div>
         </div>
     )

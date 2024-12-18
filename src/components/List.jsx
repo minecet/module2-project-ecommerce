@@ -1,8 +1,8 @@
-import productsData from "../assets/products.json";
+import productsData from "../assets/updated_products.json";
 import React, { useState } from "react";
 import ListItem from "./ListItem.jsx";
 
-function List(){
+function List({setSelectedProduct}){
     const [products, setProducts] = useState(productsData)
     const [id, setid] = useState('')
     const [title, setTitle] = useState('')
@@ -88,162 +88,178 @@ function List(){
     setThumbnail(product.thumbnail);
     setImages(product.images);
   };
+  
+ 
+
 
     return (
 
-        <div className="body">
-            <form  className="addingSection" onSubmit={handleSubmit}>
-            <span className="titleSection">ADD A NEW PRODUCT</span>
-            <div >
-            <label>
-                Title
-                <input 
-                name="title" 
-                type="text" 
-                value={title}
-                placeholder="Title" 
-                onChange={event => setTitle(event.target.value)}
-                />
-            </label>
-            <br></br>
+      <div className="body">
+        <form onSubmit={handleSubmit}>
+        <span>Add a product</span>
+        <div>
+        <label>
+          Title
+          <input 
+          name="title" 
+          type="text" 
+          value={title}
+          placeholder="Title" 
+          onChange={event => setTitle(event.target.value)}
+          />
+        </label>
 
-            <label>
-                Description
-                <input 
-                name="description" 
-                type="text"
-                value={description} 
-                placeholder="Description" 
-                onChange={event => setDescription(event.target.value)}
-                />
-            </label>
-            <br></br>
-            <label>
-                Price
-                <input 
-                name="price" 
-                type="text" 
-                value={price} 
-                onChange={event => setPrice(event.target.value)}
-                placeholder="Price" 
-                />
-            </label>
-            <br></br>
-            <label>
-                Discount Percentage
-                <input 
-                name="discountPercentage" 
-                type="discountPercentage" 
-                value={discountPercentage} 
-                onChange={event => setdiscountPercentage(event.target.value)}
-                placeholder="Discount Percentage" 
-                />
-            </label>
-            </div>
-            <br></br>
-            <div>
-            <label>
-                Category
-                <select 
-                name="category"
-                value={category}
-                onChange={event => setCategory(event.target.value)}
-                >
-                <option value="">-- None --</option>
-                <option value="lighting">lighting</option>
-                <option value="motorcycle">motorcycle</option>
-                <option value="automotive">automotive</option>
-                <option value="sunglasses">sunglasses</option>
-                <option value="womens-jewellery">womens-jewellery</option>
-                <option value="womens-bags">womens-jewellery</option>
-                <option value="womens-watches">womens-watches</option>
-                <option value="mens-watches">mens-watches</option>
-                <option value="mens-shoes">mens-shoes</option>
-                <option value="mens-shirts">mens-shirts</option>
-                </select>
-            </label>
-            <br></br>
-            <label>
-                Rating
-                <input
-                name="rating"
-                type="float"
-                placeholder="Rating"
-                //minLength={1}
-                //maxLength={1}
-                min={1}
-                max={5}
-                value={rating} 
-                onChange={event => setRating(event.target.value)}
+        <label>
+          Description
+          <input 
+          name="description" 
+          type="text"
+          value={description} 
+          placeholder="Description" 
+          onChange={event => setDescription(event.target.value)}
+          />
+        </label>
 
-                />
-            </label>
-            <br></br>
-            <label>
-                Stock
-                <input
-                name="stock"
-                type="number"
-                placeholder="How many in the stock"
-                min={0}
-                value={stock} 
-                onChange={event => setStock(event.target.value)}
+        <label>
+          Price
+          <input 
+          name="price" 
+          type="text" 
+          value={price} 
+          onChange={event => setPrice(event.target.value)}
+          placeholder="Price" 
+          />
+        </label>
 
-                />
-            </label>
-            <br></br>
-            <label>
-                Brand
-                <input
-                name="brand"
-                type="text"
-                placeholder="Brand"
-                min={0}
-                value={brand} 
-                onChange={event => setBrand(event.target.value)}
-                />
-            </label>
-            <br></br>
-            <label>
-                Thumbnail
-                <input
-                name="thumbnail"
-                type="url"
-                placeholder="thumnbnail url"
-                value={thumbnail} 
-                onChange={event => setThumbnail(event.target.value)}
+        <label>
+          Discount Percentage
+          <input 
+          name="discountPercentage" 
+          type="discountPercentage" 
+          value={discountPercentage} 
+          onChange={event => setdiscountPercentage(event.target.value)}
+          placeholder="Discount Percentage" 
+          />
+        </label>
 
-                />
-            </label>
-            <br></br>
-            <label>
-                Images
-                <input
-                name="images"
-                type="url"
-                placeholder="images url"
-                value={images} 
-                onChange={event => setImages(event.target.value)}
+        <label>
+          Category
+          <select 
+          name="category"
+          value={category}
+          onChange={event => setCategory(event.target.value)}
+          >
+          <option value="">-- None --</option>
+          <option value="laptops">laptops</option>
+          <option value="lighting">lighting</option>
+          <option value="smartphones">smartphones</option>
+          <option value="fragrances">fragrances</option>
+          <option value="skincare">skincare</option>
+          <option value="groceries">groceries</option>
+          <option value="home-decoration">home-decoration</option>
+          <option value="furniture">furniture</option>
+          <option value="tops">tops</option>
+          <option value="womens-dresses">womens-dresses</option>
+          <option value="womens-shoes">womens-shoes</option>
+          <option value="motorcycle">motorcycle</option>
+          <option value="automotive">automotive</option>
+          <option value="sunglasses">sunglasses</option>
+          <option value="womens-jewellery">womens-jewellery</option>
+          <option value="womens-bags">womens-bags</option>
+          <option value="womens-watches">womens-watches</option>
+          <option value="mens-watches">mens-watches</option>
+          <option value="mens-shoes">mens-shoes</option>
+          <option value="mens-shirts">mens-shirts</option>
+          <option value="other">other</option>
+          </select>
+        </label>
+        <label>
+          Rating
+          <input
+          name="rating"
+          type="float"
+          placeholder="Rating"
+          //minLength={1}
+          //maxLength={1}
+          min={1}
+          max={5}
+          value={rating} 
+          onChange={event => setRating(event.target.value)}
 
-                />
-            </label>
-            <br></br>
-            <button className="buttonAdding" type="submit">Add Product</button>
-            </div>
+          />
+        </label>
 
-        </form>
+        <label>
+          Stock
+          <input
+          name="stock"
+          type="number"
+          placeholder="How many in the stock"
+          min={0}
+          value={stock} 
+          onChange={event => setStock(event.target.value)}
+
+          />
+        </label>
+
+        <label>
+          Brand
+          <input
+          name="brand"
+          type="text"
+          placeholder="Brand"
+          min={0}
+          value={brand} 
+          onChange={event => setBrand(event.target.value)}
+          />
+        </label>
+
+        <label>
+          Thumbnail
+          <input
+          name="thumbnail"
+          type="url"
+          placeholder="thumnbnail url"
+          value={thumbnail} 
+          onChange={event => setThumbnail(event.target.value)}
+
+          />
+        </label>
+
+        <label>
+          Images
+          <input
+          name="images"
+          type="url"
+          placeholder="images url"
+          value={images} 
+          onChange={event => setImages(event.target.value)}
+
+          />
+        </label>
+
+        <button type="submit">Add Product</button>
+        </div>
+
+    </form>
 
 
 
-        {products.map(eachProduct => (
-            <ListItem
-                key={eachProduct.id}
-                product={eachProduct}
-                deleteItem={deleteItem} // Pass delete handler
-                editItem={editItem}
-            />
-        ))}
-    </div>)
+    {products.map(eachProduct => (
+
+        <ListItem
+          key={eachProduct.id}
+          product={eachProduct}
+          deleteItem={deleteItem} // Pass delete handler
+          editItem={editItem}
+          setSelectedProduct={setSelectedProduct}
+
+        />
+    ))}
+
+
+      </div>)
+
 }
 
 
