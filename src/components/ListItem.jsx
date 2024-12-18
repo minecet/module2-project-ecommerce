@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './ListItem.css';
 import { useNavigate } from "react-router-dom";
 
+
 function ListItem({ product, deleteItem, editItem, setSelectedProduct }){
     //const [eachItem, setItem] = useState(props)
     const navigate = useNavigate();
@@ -18,23 +19,31 @@ function ListItem({ product, deleteItem, editItem, setSelectedProduct }){
     }
 
     return (
-        <div className="bodyListItem" key= {product.id}>
-            
+        <div className="bodyListItem" >
+            <ul>
+            <li key= {product.id}>
+            <Link to={`./details/${product.id}`}>
+
             <h2>{product.title}</h2>
             <img src={product.thumbnail} alt={`Thumbnail of ${product.title}`} style={{ width: "50px" }} />
             <p>{product.description}</p>
-            <p>
-            <strong> Cost:</strong> ${product.price}
-            </p>
+            <p> <strong> Cost:</strong> ${product.price} </p>
+
+            
+            
+            </Link>
+            </li>
+            </ul>
             <div>                    
                 {handleStockLimit(product.stock)}
                 <button className="deleteButton" onClick={() => deleteItem(product.id)}>Delete</button>
                 <button className="editButton"onClick={() => editItem(product)}>Edit</button> {/* Edit button */}
                 <button className="detailsButton" onClick={handleDetailsClick}>Details</button>
 
+
             </div>
-        
-        </div>)
+        </div>
+    )
 }
 
 

@@ -27,6 +27,7 @@ function App() {
       <Route path='/item-details' element={<ItemDetailsPage product={selectedProduct} />} />
       <Route path='/list' element={<List setSelectedProduct={setSelectedProduct} />} />
 
+
       <Route path='*' element={<h1>404 page</h1>}></Route>
 
     </Routes>

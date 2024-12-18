@@ -18,3 +18,21 @@ padding: 10px;
     background-color: #A3CADB;
     border: 2px black solid;
 }
+
+.editButton {
+    background-color: #A3CADB;
+    border: 2px black solid;
+}
+.addingSection {
+    background-color: #fc7e019d;
+    gap: 30px;
+}
+.titleSection{
+    text-align: center;
+    font-weight: bold;
+}
+
+.buttonAdding {
+    background-color: #A3CADB;
+    border: 2px black solid;
+}
