@@ -1,7 +1,7 @@
 .bodyAbout{
     display: flexbox;
    text-align: center;
-   margin-left: 250%;
+
 }
 
 .bodyAbout h1{
@@ -12,6 +12,17 @@
     -1px  1px 0 black, /* Sombra inferior izquierda */
      1px  1px 0 black; /* Sombra inferior derecha */
     
+}
+
+.introductionBox{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.boxProfile{
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .bodyAbout h3{

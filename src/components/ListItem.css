@@ -19,6 +19,11 @@ padding: 10px;
     border: 2px black solid;
 }
 
+.detailsButton{
+    background-color: #A3CADB;
+    border: 2px black solid; 
+}
+
 .editButton {
     background-color: #A3CADB;
     border: 2px black solid;
