@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './ListItem.css';
 import { useNavigate } from "react-router-dom";
 
+import { Link } from 'react-router';
 
 function ListItem({ product, deleteItem, editItem, setSelectedProduct }){
     //const [eachItem, setItem] = useState(props)
